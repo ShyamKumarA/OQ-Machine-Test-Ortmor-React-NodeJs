@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+/* Home CSS */
+.home_container{
+  max-width: 100%; /* This ensures the maximum width is the screen width */
+  margin: 0 auto; /* This centers the container horizontally */
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+/* DashBoard CSS */
+.dashboard_container{
+  background-image: 
+    /* top, transparent red */
+    linear-gradient(
+      rgba(175, 173, 173, 0.45), 
+      rgba(22, 22, 22, 0.61)
+    ),
+    /* your image */
+    url(../public/assets/shutterstock_647070460.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+  height: 100vh;
+  width: 100vw;
+  padding: 70px 100px 170px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* DashBoard CSS */
+.about_container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100vw;
+  height: auto;
+  padding: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.workshop_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Card CSS */
+.card_container{
+ 
+  margin-top: 20px;
+  width: 380px;
+  height: 450px;
+  border-radius: 20px;
+  /* background-color: rgb(226, 226, 226); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 50px;
+  transition: box-shadow 0.3s ease; 
+}
+
+.card_container:hover{
+  box-shadow: 5px 5px 8px rgba(46, 46, 46, 0.5); 
+  cursor: pointer;
+}
+
+
+.cards{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0px 50px;
+  margin: 20px;
 }
