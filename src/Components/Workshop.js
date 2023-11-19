@@ -1,33 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from './Card'
+import FloatWindow from './FloatWindow'
 
 function Workshop() {
+    let [show,setShow] = useState(false)
+    let [workData, setWorkData] = useState()
 
     let workshopData = [
         {
             id: 1,
             img: "./assets/HSSE/Asset 3.png",
+            profile: "./assets/HSSE/Asset 15.png",
             desc: "Systems, Processes & Assurance – Be Good not Lucky"
         },
         {
             id: 2,
             img: "./assets/HSSE/Asset 4.png",
+            profile: "./assets/HSSE/Asset 16.png",
             desc: "The Leaders Role in Delivering Success – What Type of Leader is Needed"
         },
         {
             id: 3,
+            profile: "./assets/HSSE/Asset 17.png",
             img: "./assets/HSSE/Asset 5.png",
             desc: "Human Reliability – Why Things Go Wrong and What Can We Do?"
         },
         {
             id: 4,
+            profile: "./assets/HSSE/Asset 18.png",
             img: "./assets/HSSE/Asset 6.png",
             desc: "Creating a Learning Culture –The Way We Choose Do Things Around Here"
         },
     ]
 
+    const handleBtn = (id) => {
+        if(show){
+            setShow(false)
+        }else{
+            setShow(true)
+            let test = workshopData.filter(item => item.id === id)
+
+            setWorkData(test[0])
+        }
+    }
+
   return (
+    <>
+    {show && (<FloatWindow functio = {handleBtn} data= {workData}/>)}
+    
     <div className='workshop_container' >
+
         <div>
             <h2 style={{textAlign: "center" , marginBottom: "60px"}}> 
                 Workshop
@@ -37,7 +59,7 @@ function Workshop() {
             {workshopData.map((data) => {
                 return(
 
-                    <Card id={data.id}  desc={data.desc} image={data.img}/>
+                    <Card id={data.id}  desc={data.desc} image={data.img} functio={handleBtn}/>
                 )
             })}
             
@@ -46,6 +68,7 @@ function Workshop() {
         </div>
         
     </div>
+    </>
     
   )
 }
