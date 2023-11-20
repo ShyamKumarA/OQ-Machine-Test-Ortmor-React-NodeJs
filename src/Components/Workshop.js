@@ -9,26 +9,26 @@ function Workshop() {
     let workshopData = [
         {
             id: 1,
-            img: "./assets/HSSE/Asset 3.png",
-            profile: "./assets/HSSE/Asset 15.png",
+            img: "./assets/HSSE/Asset3.png",
+            profile: "./assets/HSSE/Asset15.png",
             desc: "Systems, Processes & Assurance – Be Good not Lucky"
         },
         {
             id: 2,
-            img: "./assets/HSSE/Asset 4.png",
-            profile: "./assets/HSSE/Asset 16.png",
+            img: "./assets/HSSE/Asset4.png",
+            profile: "./assets/HSSE/Asset16.png",
             desc: "The Leaders Role in Delivering Success – What Type of Leader is Needed"
         },
         {
             id: 3,
-            profile: "./assets/HSSE/Asset 17.png",
-            img: "./assets/HSSE/Asset 5.png",
+            profile: "./assets/HSSE/Asset17.png",
+            img: "./assets/HSSE/Asset5.png",
             desc: "Human Reliability – Why Things Go Wrong and What Can We Do?"
         },
         {
             id: 4,
-            profile: "./assets/HSSE/Asset 18.png",
-            img: "./assets/HSSE/Asset 6.png",
+            profile: "./assets/HSSE/Asset18.png",
+            img: "./assets/HSSE/Asset6.png",
             desc: "Creating a Learning Culture –The Way We Choose Do Things Around Here"
         },
     ]
